@@ -38,7 +38,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  return array.push(elemento);
+   array.push (elemento);
+return array;
 }
 
 
@@ -47,7 +48,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  return array.unshift(elemento);
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -78,7 +80,7 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var acmulador=0;
+  var acumulador = 0;
   for (var i=0 ; i < numeros.length ; i ++) {
     acumulador += numeros [i];
   }
@@ -151,7 +153,7 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
   if (numeroDeDia === 1 || numeroDeDia === 7) {
-    return " Es fin de semana";
+    return "Es fin de semana";
   }
   else if(numeroDeDia > 1 && numeroDeDia < 7){
     return "Es dia Laboral";
@@ -177,9 +179,9 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  var elemento = 0;
-  for ( i=0 ; i < arreglo.length; i++){
-    if (arreglo [i] !== arreglo[i+1]){
+  
+  for ( var i=0 ; i < arreglo.length -1; i++) {
+    if (arreglo [i] !== arreglo[i+1]) {
       return false;
     }
   }
@@ -239,7 +241,7 @@ function breakStatement(numero) {
     }
   }
   if (arrayNumeros.length < 10) {
-    return "Seinterrumpió la ejecución";
+    return "Se interrumpió la ejecución";
   }
   else if (arrayNumeros.length === 10){
     return arrayNumeros;
